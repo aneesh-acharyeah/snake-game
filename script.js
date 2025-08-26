@@ -42,12 +42,12 @@ function draw() {
   }
 
   // Check self collision
-  for (let i = 0; i < snake.length; i++) {
-    if (head.x === snake[i].x && head.y === snake[i].y) {
-      endGame();
-      return;
-    }
+ for (let i = 1; i < snake.length; i++) {
+  if (head.x === snake[i].x && head.y === snake[i].y) {
+    endGame();
+    return;
   }
+}
 
   // Add new head
   snake.unshift(head);
